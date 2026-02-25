@@ -7,8 +7,8 @@ function pad2(n: number) {
 }
 
 export default function Countdown() {
-  // Wedding date: April 28, 2026 (local time)
-  const target = useMemo(() => new Date(2026, 3, 28, 0, 0, 0), []); // month is 0-based (3 = April)
+
+  const target = useMemo(() => new Date(2026, 3, 28, 0, 0, 0), []); 
 
   const [now, setNow] = useState(() => new Date());
   const [done, setDone] = useState(false);

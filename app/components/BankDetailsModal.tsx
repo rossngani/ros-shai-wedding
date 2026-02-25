@@ -27,14 +27,14 @@ export default function BankDetailsModal({ open, onClose }: Props) {
       aria-modal="true"
       role="dialog"
     >
-      {/* Backdrop */}
+{/* Backdrop */}
       <button
         className="absolute inset-0 bg-black/50"
         onClick={onClose}
         aria-label="Close"
       />
 
-      {/* Modal */}
+{/* Modal */}
       <div className="relative w-full max-w-lg rounded-[28px] bg-white shadow-xl border border-accent/20 overflow-hidden">
         <div className="px-8 py-7 border-b border-accent/10">
           <h3 className="text-2xl text-accent font-theseasons">Bank Details</h3>
@@ -44,7 +44,6 @@ export default function BankDetailsModal({ open, onClose }: Props) {
         </div>
 
         <div className="px-8 py-7 space-y-5">
-          {/* Replace these with your real details */}
           <div>
             <p className="text-sm text-darkgrey/70">Bank Name</p>
             <p className="text-lg text-darkgrey">MariBank Philippines</p>

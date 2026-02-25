@@ -76,7 +76,7 @@ export default function Guestbook() {
   return (
     <section className="relative py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+{/* header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl text-accent font-theseasons">Guestbook</h2>
           <p className="mt-4 md:text-xl text-darkgrey/80 max-w-2xl mx-auto">
@@ -85,7 +85,7 @@ export default function Guestbook() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* Form */}
+{/* form */}
           <div className="rounded-[28px] border border-accent/15 bg-white shadow-sm p-8">
             <form onSubmit={onSubmit} className="space-y-5">
               <div>
@@ -136,7 +136,7 @@ export default function Guestbook() {
             </form>
           </div>
 
-          {/* Messages */}
+{/* msg */}
           <div className="rounded-[28px] border border-accent/15 bg-white shadow-sm p-8">
             <h3 className="text-2xl text-accent font-theseasons mb-6">Messages</h3>
 
@@ -164,7 +164,7 @@ export default function Guestbook() {
           </div>
         </div>
 
-        {/* Divider */}
+{/* divider */}
         <div className="mt-16 flex justify-center">
           <div className="h-px w-24 bg-accent/30" />
         </div>

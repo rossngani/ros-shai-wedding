@@ -38,7 +38,6 @@ export default function RSVP() {
   }, []);
 
   const fireConfetti = () => {
-    // subtle, elegant burst (not too loud)
     confetti({
       particleCount: 80,
       spread: 70,
@@ -104,7 +103,7 @@ export default function RSVP() {
           Kindly let us know if you will be joining us.
         </p>
 
-        {/* Counters */}
+{/* Counters */}
         {/* <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
           <StatCard
             label="Attending"

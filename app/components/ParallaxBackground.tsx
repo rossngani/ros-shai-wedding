@@ -14,18 +14,14 @@ export default function ParallaxBackground() {
       document.querySelectorAll<HTMLElement>("[data-parallax-bg]").forEach((el) => {
         const speed = Number(el.dataset.parallaxSpeed ?? "0.18");
 
-        // Element's position in the document
         const elTop = el.offsetTop;
         const elHeight = el.offsetHeight;
 
-        // Distance scrolled relative to this section
         const relativeY = scrollY - elTop;
 
-        // Calculate parallax offset
         const offset = -relativeY * speed;
 
-        // Clamp so it doesn't jump too much (prevents the band you saw)
-        const maxShift = elHeight * 0.25; // adjust 0.15–0.35
+        const maxShift = elHeight * 0.25; 
         const clamped = Math.max(-maxShift, Math.min(maxShift, offset));
 
         el.style.backgroundPosition = `center ${clamped}px`;

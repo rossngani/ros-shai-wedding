@@ -8,7 +8,6 @@ export default function WeddingDetails() {
 
   return (
     <section className="relative py-28 px-6 overflow-hidden">
-      {/* Optional background image for this section */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/bg-wedding-details.jpg')" }}
@@ -16,7 +15,6 @@ export default function WeddingDetails() {
       <div className="absolute inset-0 z-0 bg-white/50 md:bg-white/70" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl text-accent font-theseasons">Wedding Details</h2>
           <p className="mt-4 md:text-xl text-darkgrey/80 max-w-2xl mx-auto">
@@ -24,9 +22,7 @@ export default function WeddingDetails() {
           </p>
         </div>
 
-        {/* Details + Map */}
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* Details cards */}
           <div className="space-y-6">
             <div className="rounded-[28px] bg-white/90 border border-accent/15 shadow-sm p-8">
               <h3 className="text-2xl text-accent mb-4 font-theseasons">Ceremony</h3>
@@ -52,7 +48,7 @@ export default function WeddingDetails() {
             </div>
           </div>
 
-          {/* Map */}
+ {/* Map */}
           <div className="rounded-[28px] overflow-hidden border border-accent/15 shadow-sm bg-white/90">
             <div className="p-6 border-b border-accent/10">
               <h3 className="text-2xl text-accent font-theseasons">Location</h3>
@@ -61,7 +57,7 @@ export default function WeddingDetails() {
               </p>
             </div>
 
-            {/* Option A: Google Maps Embed (replace src) */}
+
             <div className="h-[360px] md:h-[440px]">
               <iframe
                 title="Wedding Location Map"
@@ -72,13 +68,13 @@ export default function WeddingDetails() {
               />
             </div>
 
-            {/* Option B: Static map image instead (comment iframe and use below)
+            {/* Static map image
             <img src="/map.jpg" alt="Map" className="w-full h-[360px] md:h-[440px] object-cover" />
             */}
           </div>
         </div>
 
-        {/* Gift message + button */}
+{/* button */}
         <div className="mt-14 text-center">
           <p className="max-w-3xl mx-auto text-darkgrey leading-relaxed">
             <span className="text-accent">

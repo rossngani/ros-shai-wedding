@@ -22,15 +22,13 @@ export default function Gallery() {
         >
   <div className="absolute inset-0 bg-white/50 md:bg-white/70 z-0" />
   <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Title */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl text-accent font-theseasons">Gallery</h2>
           <p className="mt-4 md:text-xl text-darkgrey/80 max-w-2xl mx-auto">
             A few moments we want to remember forever.
           </p>
         </div>
-
-        {/* Collage */}
+{/* grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[170px] md:auto-rows-[190px] gap-4 md:gap-5">
           {photos.map((p, idx) => (
             <div
@@ -43,16 +41,13 @@ export default function Gallery() {
                 className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.06]"
               />
 
-              {/* Soft overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-500" />
 
-              {/* Minimal corner accent */}
               <div className="absolute top-4 left-4 h-2 w-2 rounded-full bg-secondary opacity-0 group-hover:opacity-100 transition duration-500" />
             </div>
           ))}
         </div>
-
-        {/* Bottom divider */}
+{/* devider */}
         <div className="mt-16 flex justify-center">
           <div className="h-px w-24 bg-accent/30" />
         </div>
