@@ -125,14 +125,14 @@ export default function InvitationPage() {
     <WeddingDetails />
     </Reveal>
 
-{/* guestbook */}
-    <Reveal>
-    <Guestbook />
-    </Reveal>
-
 {/* rsvp */}
     <Reveal>
     <RSVP />
+    </Reveal>
+
+{/* guestbook */}
+    <Reveal>
+    <Guestbook />
     </Reveal>
 
 {/* countdown */}
@@ -142,10 +142,9 @@ export default function InvitationPage() {
 
 {/* footer */}
       <footer className="py-16 text-center bg-accent text-white px-6">
-        <p className="text-2xl mb-4">Thank you</p>
+        <p className="text-2xl mb-4">With Love</p>
         <p className="max-w-2xl mx-auto">
-          It is an honor and happiness for us if you are willing to be present
-          to give your blessing to the bride and groom.
+          As we unite in marriage, we warmly invite you to join us in celebrating this beautiful milestone.
         </p>
       </footer>
 

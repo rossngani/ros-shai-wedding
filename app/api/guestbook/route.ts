@@ -1,55 +1,48 @@
 import { NextResponse } from "next/server";
 
-type Entry = {
-  name: string;
-  message: string;
-  createdAt: string;
-};
-
-// Temporary in-memory store (resets on redeploy/server restart)
-const store: Entry[] = [];
+const SCRIPT_URL = process.env.RSVP_SCRIPT_URL!;
+const TOKEN = process.env.RSVP_TOKEN!;
 
 export async function GET() {
-  return NextResponse.json({ entries: store.slice().reverse() });
+  try {
+    const url = new URL(SCRIPT_URL);
+    url.searchParams.set("type", "guestbook");
+
+    const res = await fetch(url.toString(), { cache: "no-store" });
+    const data = await res.json();
+
+    if (!data?.ok) return NextResponse.json(data, { status: 500 });
+    return NextResponse.json(data);
+  } catch (err: any) {
+    return NextResponse.json(
+      { ok: false, error: "Failed to load guestbook.", details: String(err?.message ?? err) },
+      { status: 500 }
+    );
+  }
 }
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const name = String(body?.name ?? "").trim();
-    const message = String(body?.message ?? "").trim();
 
-    if (!name || !message) {
-      return NextResponse.json(
-        { error: "Name and message are required." },
-        { status: 400 }
-      );
-    }
+    const url = new URL(SCRIPT_URL);
+    url.searchParams.set("type", "guestbook");
+    url.searchParams.set("token", TOKEN);
 
-    if (name.length > 60) {
-      return NextResponse.json(
-        { error: "Name is too long." },
-        { status: 400 }
-      );
-    }
+    const res = await fetch(url.toString(), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
 
-    if (message.length > 500) {
-      return NextResponse.json(
-        { error: "Message is too long (max 500 characters)." },
-        { status: 400 }
-      );
-    }
+    const data = await res.json();
+    if (!data?.ok) return NextResponse.json(data, { status: 400 });
 
-    const entry: Entry = {
-      name,
-      message,
-      createdAt: new Date().toISOString(),
-    };
-
-    store.push(entry);
-
-    return NextResponse.json({ ok: true, entry });
-  } catch {
-    return NextResponse.json({ error: "Invalid request." }, { status: 400 });
+    return NextResponse.json(data);
+  } catch (err: any) {
+    return NextResponse.json(
+      { ok: false, error: "Failed to submit guestbook.", details: String(err?.message ?? err) },
+      { status: 500 }
+    );
   }
 }

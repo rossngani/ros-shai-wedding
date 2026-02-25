@@ -97,7 +97,7 @@ export default function RSVP() {
   };
 
   return (
-    <section className="relative py-28 px-6 bg-white">
+    <section className="relative py-28 px-6  bg-primary/20">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl text-accent font-theseasons">RSVP</h2>
         <p className="mt-4 md:text-xl text-darkgrey/80">
