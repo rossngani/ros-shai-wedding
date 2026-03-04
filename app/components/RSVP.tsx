@@ -100,7 +100,11 @@ export default function RSVP() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl text-accent font-theseasons">RSVP</h2>
         <p className="mt-4 md:text-xl text-darkgrey/80">
-          Kindly let us know if you will be joining us.
+          Kindly confirm your attendance on or before April 4th, 2026.
+        </p>
+
+         <p className="mt-4 md:text-xl text-darkgrey/80">
+        We look forward to celebrating this special day with you.
         </p>
 
 {/* Counters */}
