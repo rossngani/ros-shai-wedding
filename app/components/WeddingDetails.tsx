@@ -31,7 +31,7 @@ export default function WeddingDetails() {
                 <p><span className="text-darkgrey/70">Time:</span> 8:00 AM</p>
                 <p><span className="text-darkgrey/70">Venue:</span> Office of the Mayor, San Jose Baggao Hall</p>
                 <p className="text-darkgrey/70 mt-3">
-                  Attire: Formal / Semi-formal (optional)
+                  Attire: Formal / Semi-formal
                 </p>
               </div>
             </div>
