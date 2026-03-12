@@ -69,7 +69,7 @@ export default function InvitationPage() {
                 </h3>
                 <p className="md:text-2xl leading-relaxed text-darkgrey">
                 Rosefield <br />
-                Son of Mr. & Mrs. Uton <br />
+                Son of Fredelito and Rosalinda <br />
                 A loving, passionate, and devoted partner.
                 </p>
             </div>
@@ -80,7 +80,7 @@ export default function InvitationPage() {
                 </h3>
                 <p className="md:text-2xl leading-relaxed text-darkgrey">
                 Shaira <br />
-                Daughter of Mr. & Mrs. Talla <br />
+                Daughter of Edmund and Marilyn <br />
                 Graceful, kind-hearted, and full of love.
                 </p>
             </div>
